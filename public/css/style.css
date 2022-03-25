@@ -1,0 +1,47 @@
+/* global section */
+* { box-sizing: border-box; }
+
+.container-fluid {
+    width: 80%;
+}
+/* header section */
+/* main section */
+
+.monsters-box {
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    gap: 1rem;
+}
+
+.monster-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+    box-shadow: 3px 2px 4px 2px #9E9C9C;
+}
+
+.single-monster {
+    display: flex;
+    justify-content: center;
+}
+
+.single-monster > div {
+    text-align: center;
+}
+
+.main-img {
+    margin: 1rem;
+}
+
+.elements-box {
+    display: flex;
+    align-items: flex-end;
+    flex-wrap: wrap;
+}
+
+.element-box {
+    padding: 1rem;
+    max-width: 100px;
+}

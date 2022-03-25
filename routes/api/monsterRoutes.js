@@ -17,4 +17,17 @@ monsters.get('/', (req, res) => {
         });
 });
 
+monsters.get('/:id', (req, res) => {
+    const id = parseInt(req.params.id);
+    fetch(`${API}/${id}`)
+        .then(res => res.json())
+        .then(data => {
+            res.render('pages/single-monster', {
+                title: data.name,
+                name: data.name,
+                data
+            });
+        });
+});
+
 export default monsters;

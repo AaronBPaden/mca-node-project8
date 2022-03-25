@@ -1,0 +1,16 @@
+<%- include('../partials/header'); %>
+<main class="main container-fluid single-monster">
+    <div>
+        <img class="main-img img-fluid" src="<%= data.image.replace(/\/revision.*/, '') %>" alt="<%= data.name %>">
+        <h2>Elements:</h2>
+        <div class="elements-box">
+            <% data.elements.forEach(el => { %>
+                <div class="element-box">
+                    <img class="element-img img-fluid" src="<%= el.image.replace(/\/revision.*/, '') %>" alt="<%= el.type %>">
+                    <p class="element-text"><%= el.type %></p>
+                </div>
+            <% }); %>
+        </div>
+    </div>
+</main>
+<%- include('../partials/footer'); %>
