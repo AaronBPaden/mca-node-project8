@@ -1,0 +1,12 @@
+<%- include('../partials/header'); %>
+<main class="main container-fluid monsters-box">
+    <% data.forEach(el => { %>
+        <a href="/monsters/<%= el.id %>">
+            <div class="monster-box">
+                <img class="img-fluid" src="<%= el.image.replace(/\/revision.*/, '') %>" alt="<%= el.name %>" />
+                <p class="monster-title"><%= el.name %></p>
+            </div>
+        </a>
+    <% }); %>
+</main>
+<%- include('../partials/footer'); %>
